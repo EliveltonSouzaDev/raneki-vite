@@ -42,7 +42,8 @@ ul {
 body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #345;
-  background: url('./assets/pattern.svg') repeat top;
+  /* background: url('./assets/pattern.svg') repeat top; */
+  background-color: #f0f0f0;
 }
 
 a {
@@ -58,7 +59,7 @@ img {
 .btn {
   display: block;
   padding: 10px 30px;
-  background: #87f;
+  background: #38a667;
   border-radius: 4px;
   color: #fff;
   text-align: center;
@@ -71,7 +72,7 @@ img {
 }
 
 .btn:hover {
-  background: #65d;
+  background: #f99417;
   transform: scale(1.1);
 }
 
@@ -103,7 +104,7 @@ textarea:hover,
 textarea:focus {
   outline: none;
   box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
-  border-color: #87f;
+  border-color: #f99417;
 }
 .v-enter,
 .v-leave-to {

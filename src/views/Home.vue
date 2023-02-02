@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>👍 Compre ou Venda 👎</h1>
+    <h1>Find the best products</h1>
     <ProductsSearch />
     <ProductsList />
   </section>
@@ -21,9 +21,17 @@ export default {
 
 <style scoped>
 h1 {
-  color: #87f;
+  color: #38a667;
   margin-top: 40px;
   font-size: 2rem;
   text-align: center;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  font-weight: bold;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
 }
 </style>

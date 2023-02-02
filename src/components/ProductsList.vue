@@ -3,7 +3,7 @@
     <transition mode="out-in">
       <div v-if="products" key="products" class="products">
         <div v-for="(product, index) in products" :key="index" class="product">
-          <router-link to="/">
+          <router-link :to="{ name: 'produto', params: { id: product.id } }">
             <img v-if="products.fotos" :src="product.fotos[0]" :alt="product.fotos[0].titulo" />
             <h1>{{ product.nome }}</h1>
             <p class="price">R$ {{ product.preco }}</p>
@@ -100,7 +100,7 @@ export default {
 }
 
 .price {
-  color: #e80;
+  color: #fb6161;
   font-weight: bold;
 }
 

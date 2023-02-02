@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Ranek. Alguns direitos reservados.</p>
+    <p>YouTech. Alguns direitos reservados.</p>
   </footer>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 
 <style>
 footer {
-  background: #87f;
+  background: #38a667;
   padding: 25px 0;
   text-align: center;
   font-size: 1.2rem;
