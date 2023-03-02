@@ -1,6 +1,7 @@
 import Home from '@/views/Home.vue';
 import Produto from '@/views/Produto.vue';
 import Login from '@/views/Login.vue';
+import Usuario from '@/views/usuario/Usuario.vue';
 
 export default [
   {
@@ -18,5 +19,10 @@ export default [
     path: '/login',
     name: 'login',
     component: Login,
+  },
+  {
+    path: '/usuario',
+    name: 'usuario',
+    component: Usuario,
   },
 ];

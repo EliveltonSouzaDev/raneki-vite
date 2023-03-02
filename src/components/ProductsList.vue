@@ -100,7 +100,7 @@ export default {
 }
 
 .price {
-  color: #fb6161;
+  color: rgb(248, 142, 12);
   font-weight: bold;
 }
 

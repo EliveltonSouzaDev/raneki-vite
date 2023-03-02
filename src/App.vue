@@ -9,15 +9,15 @@
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue';
-import TheFooter from '@/components/TheFooter.vue';
+import TheHeader from '@/components/TheHeader.vue'
+import TheFooter from '@/components/TheFooter.vue'
 
 export default {
   components: {
     TheHeader,
     TheFooter,
   },
-};
+}
 </script>
 
 <style>
@@ -106,6 +106,7 @@ textarea:focus {
   box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
   border-color: #f99417;
 }
+
 .v-enter,
 .v-leave-to {
   opacity: 0;

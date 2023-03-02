@@ -20,4 +20,4 @@ module.exports = {
   endOfLine: 'lf',
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: false,
-};
+}
