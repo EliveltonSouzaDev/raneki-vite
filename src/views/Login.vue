@@ -11,17 +11,17 @@
     <p class="perdeu">
       <a href="/" target="_blank">Perdeu a senha? Clique aqui.</a>
     </p>
-    <LoginCriar />
+    <LoginCreate />
   </section>
 </template>
 
 <script>
-import LoginCriar from '@/components/LoginCreate.vue';
+import LoginCreate from '@/components/LoginCreate.vue';
 
 export default {
   name: 'Login',
   components: {
-    LoginCriar,
+    LoginCreate,
   },
   data() {
     return {

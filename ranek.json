@@ -21,6 +21,18 @@
       "numero": "25",
       "estado": "RJ",
       "cidade": "Rio de Janeiro"
+    },
+    {
+      "id": "tst.elivelton@gmail.com",
+      "nome": "elivelton",
+      "email": "tst.elivelton@gmail.com",
+      "senha": "souza12",
+      "cep": "11410160",
+      "rua": "Avenida Leomil",
+      "numero": "180",
+      "bairro": "Pitangueiras",
+      "cidade": "Guarujá",
+      "estado": "SP"
     }
   ],
   "produto": [
