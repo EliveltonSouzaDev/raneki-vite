@@ -8,37 +8,64 @@ export default new Vuex.Store({
   strict: true,
   state: {
     login: false,
-    usuario: {
+    user: {
       id: '',
-      nome: '',
+      name: '',
       email: '',
-      senha: '',
-      cep: '',
-      rua: '',
-      numero: '',
-      bairro: '',
-      cidade: '',
-      estado: '',
+      password: '',
+      zipCode: '',
+      road: '',
+      number: '',
+      neighborhood: '',
+      city: '',
+      state: '',
     },
+    product_user: null,
   },
   mutations: {
     UPDATE_LOGIN(state, payload) {
       state.login = payload;
     },
-    UPDATE_USUARIO(state, payload) {
-      state.usuario = Object.assign(state.usuario, payload);
+    UPDATE_USER(state, payload) {
+      state.user = Object.assign(state.user, payload);
+    },
+    UPDATE_USER_PRODUCTS(state, payload) {
+      state.user_products = payload;
+    },
+    ADD_USUARIO_PRODUCTS(state, payload) {
+      state.user_products.unshit(payload);
     },
   },
   actions: {
-    getUsuario(context, payload) {
-      return api.get(`/usuario/${payload}`).then((response) => {
-        context.commit('UPDATE_USUARIO', response.data);
+    getUserProducts(context) {
+      api.get(`/product?user_id=${context.state.user.id}`).then((response) => {
+        context.commit('UPDATE_USER_PRODUCTS', response.data);
+      });
+    },
+    getUser(context, payload) {
+      return api.get(`/username/${payload}`).then((response) => {
+        context.commit('UPDATE_USER', response.data);
         context.commit('UPDATE_LOGIN', true);
       });
     },
-    criarUsuario(context, payload) {
-      context.commit('UPDATE_USUARIO', { id: payload.email });
-      return api.post('/usuario', payload);
+    createUser(context, payload) {
+      context.commit('UPDATE_USER', { id: payload.email });
+      return api.post('/username', payload);
+    },
+    logoutUser(context) {
+      context.commit('UPDATE_USER', {
+        id: '',
+        name: '',
+        email: '',
+        password: '',
+        zipCode: '',
+        road: '',
+        number: '',
+        neighborhood: '',
+        city: '',
+        state: '',
+      });
+      context.commit('UPDATE_LOGIN', false);
     },
   },
 });

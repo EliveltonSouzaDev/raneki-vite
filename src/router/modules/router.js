@@ -1,5 +1,5 @@
 import Home from '@/views/Home.vue';
-import Produto from '@/views/Produto.vue';
+import Product from '@/views/Product.vue';
 import Login from '@/views/Login.vue';
 import User from '@/views/user/User.vue';
 import UserProduct from '@/views/user/UserProduct.vue';
@@ -14,9 +14,9 @@ export default [
     component: Home,
   },
   {
-    path: '/produto/:id',
-    name: 'produto',
-    component: Produto,
+    path: '/product/:id',
+    name: 'product',
+    component: Product,
     props: true,
   },
   {
@@ -25,27 +25,27 @@ export default [
     component: Login,
   },
   {
-    path: '/usuario',
+    path: '/username',
     component: User,
     children: [
       {
         path: '',
-        name: 'usuario',
+        name: 'user',
         component: UserProduct,
       },
       {
-        path: 'compras',
-        name: 'compras',
+        path: 'shopping',
+        name: 'shopping',
         component: UserBuy,
       },
       {
-        path: 'vendas',
-        name: 'vendas',
+        path: 'sales',
+        name: 'sales',
         component: UserSells,
       },
       {
-        path: 'editar',
-        name: 'usuario-editar',
+        path: 'edit',
+        name: 'user-edit',
         component: UserEdit,
       },
     ],

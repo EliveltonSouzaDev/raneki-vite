@@ -1,5 +1,5 @@
 {
-  "usuario": [
+  "user": [
     {
       "id": "andre@origamid.com",
       "email": "andre@origamid.com",
@@ -35,7 +35,7 @@
       "estado": "SP"
     }
   ],
-  "produto": [
+  "product": [
     {
       "id": "notebook21",
       "nome": "Notebook",

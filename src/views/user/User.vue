@@ -1,21 +1,21 @@
 <template>
-  <section class="usuario">
+  <section class="user">
     <nav class="sidenav">
       <ul>
         <li>
-          <router-link :to="{ name: 'usuario' }">Produtos</router-link>
+          <router-link :to="{ name: 'user' }">Products</router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'compras' }">Compras</router-link>
+          <router-link :to="{ name: 'shopping' }">Purchases</router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'vendas' }">Vendas</router-link>
+          <router-link :to="{ name: 'sales' }">Sales</router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'usuario-editar' }">Editar Usuário</router-link>
+          <router-link :to="{ name: 'user-edit' }">Edit User</router-link>
         </li>
         <li>
-          <button @click.prevent="deslogar">Deslogar</button>
+          <button @click.prevent="logout">Logout</button>
         </li>
       </ul>
     </nav>
@@ -27,10 +27,10 @@
 
 <script>
 export default {
-  name: 'Usuario',
+  name: 'User',
   methods: {
-    deslogar() {
-      this.$store.dispatch('deslogarUsuario');
+    logout() {
+      this.$store.dispatch('dislogarUser');
       this.$router.push('/login');
     },
   },
@@ -38,7 +38,7 @@ export default {
 </script>
 
 <style scoped>
-.usuario {
+.user {
   display: grid;
   grid-template-columns: minmax(140px, 200px) 1fr;
   max-width: 900px;
@@ -48,7 +48,7 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
-  .usuario {
+  .user {
     grid-template-columns: 1fr;
     margin: 0px auto;
   }

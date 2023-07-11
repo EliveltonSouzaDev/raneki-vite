@@ -4,12 +4,12 @@
     <form>
       <label for="email">Email</label>
       <input id="email" v-model="login.email" type="email" name="email" />
-      <label for="senha">Senha</label>
-      <input id="senha" v-model="login.senha" type="password" name="senha" />
-      <button class="btn" @click.prevent="logar">Logar</button>
+      <label for="password">Password</label>
+      <input id="password" v-model="login.password" type="password" name="password" />
+      <button class="btn" @click.prevent="login">Login</button>
     </form>
-    <p class="perdeu">
-      <a href="/" target="_blank">Perdeu a senha? Clique aqui.</a>
+    <p class="lost">
+      <a href="/" target="_blank">Lost your password? Click here.</a>
     </p>
     <LoginCreate />
   </section>
@@ -23,18 +23,18 @@ export default {
   components: {
     LoginCreate,
   },
-  data() {
+  date() {
     return {
-      login: {
+      Login: {
         email: '',
-        senha: '',
+        password: '',
       },
     };
   },
   methods: {
-    logar() {
-      this.$store.dispatch('getUsuario', this.login.email);
-      this.$router.push({ name: 'usuario' });
+    login() {
+      this.$store.dispatch('getUser', this.login.email);
+      this.$router.push({ name: 'user' });
     },
   },
 };
@@ -65,12 +65,12 @@ form {
   margin-right: auto;
 }
 
-.perdeu {
+.lost {
   text-align: center;
   margin: 20px auto 0 auto;
 }
 
-.perdeu a:hover {
+.lost a:hover {
   color: #87f;
   text-decoration: underline;
 }
